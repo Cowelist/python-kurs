@@ -31,3 +31,5 @@ typing = (input(f"pick a nummber between {t1_ran} - {t2_ran} \n"))
 
 if typing != int:
     print ("Type a nummber")
+elif num == typing:
+    print ("")
