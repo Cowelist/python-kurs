@@ -12,11 +12,67 @@ for file in os.listdir(path):
 
 var = ("w2.py")
 
-for a in files:
-    if re.search(r'\d', a):
-        print("int here")
+def finner_int_str():
+    for a in files:
+        if re.search(r'\d', a):
+            print("int here")
+        else:
+            print("no int") 
+
+
+
+def re_dot():
+    Con = ("")  
+
+    patern =re.compile(r'[^a-zA-Å0-9._-]')
+
+    check = set(Con)
+
+    after_dot = Con.split('.', 1)[0]
+
+    match = patern.findall(after_dot)
+
+    check.update(match)
+
+    if check:
+        print ("before")
     else:
-        print("no int") 
+        print ("after")
+
+def os_dot():    
+    for a in os.listdir(path):
+        if not a.startswith("."):
+            remove = a.split(".")[0]
+            files.append(remove)
+            print (remove)
+
+    for a in files:
+        if re.search(r'\d', a):
+            print("int here")
+        else:
+            print("no int") 
+
+
+
+os_dot()
+
+# for a in files:
+#     if re.search(r'\d', a):
+#         print("int here")
+#     else:
+#         print("no int") 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def folder_check():
